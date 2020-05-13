@@ -1,0 +1,17 @@
+<%- include ("../partials/header") %>
+
+<div class="container-fluid">
+	<div class="row">
+		<% videos.forEach(function(video){ %>
+		<div class="col-md-3 col-sm-6">
+			<p><%= video.title %></p>
+			<img class="card-img-top" src="<%= video.image %>">
+		</div>
+		<a href="/videoIndex/<%= video._id %>">More info</a>
+	    <% }); %>
+	</div>
+</div>
+
+<a href="/videoIndex/new">New</a>
+
+<%- include ("../partials/footer") %>

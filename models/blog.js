@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
 
 var blogSchema = new mongoose.Schema({
-name: String,
-intro: String,
-created: {type: Date, default: Date.now},
+title: String,
+subtitle: String,
+abstract: String,
 image: String,
 blogContent: String,
 author: {

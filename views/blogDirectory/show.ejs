@@ -1,5 +1,11 @@
 <%- include ("../partials/header") %>
 
+<p><%= blog.title %></p>
+
 <p><%= blog.blogContent %></p>
+
+<form action="/blogIndex/<%= blog._id %>?_method=DELETE" method="POST">
+	<button class="btn btn-danger">Delete</button>
+</form>
 
 <%- include ("../partials/footer") %>

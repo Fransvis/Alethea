@@ -6,20 +6,26 @@
 
 		<form action="/blogIndex" method="POST">
 			<div class="form-group mx-sm-3">
-			<label>Title</label>
-			<input class="form-control" type="text" name="name"  placeholder="BlogPost Name">
+				<label>Title</label>
+			<input class="form-control" type="text" name="title"  placeholder="title">
+			</div>
+			<div class="form-group mx-sm-3">
+				<label>Subtitle</label>
+			<input class="form-control" type="text" name="subtitle"  placeholder="subtitle">
 			</div>
 			<div class="form-group mx-sm-3">
 				<label>Image</label>
 			<input class="form-control" type="text" name="image" placeholder="image">
 			</div>			
 			<div class="form-group mx-sm-3">
-				<label>Intro</label>
-			<input class="form-control" type="text" name="intro" placeholder="Intro">
+				<label>Abstract</label>
+			<input class="form-control" type="text" name="abstract" placeholder="abstract">
 			</div>
 			<div class="form-group mx-sm-3">
 				<label>Content</label>
-			<textarea class="form-control" rows="7" name="blogContent"></textarea>
+					<div>
+					<textarea class="form-control" rows="7" name="blogContent" placeholder="blogContent"></textarea>
+					</div>
 			</div>
 			<button class="btn btn-outline-info mx-sm-3" href="#">Submit</button>
 		</form>
@@ -27,17 +33,6 @@
        <!-- <a href="/blogIndex">Back</a> -->
 	
 </div>
-
-
-<!-- <div class="container">
-	<form>
-		<input type="text" class="form-control" placeholder="Name of Blogpost">
-		<input type="text" class="form-control" placeholder="Author">
-		<input type="text" class="form-control" placeholder="Date">
-		<input type="text" class="form-control" placeholder="BlogPost">
-		<button href="#">Submit</button>
-	</form>
-</div> -->
 
 
 <%- include ("../partials/footer") %>
