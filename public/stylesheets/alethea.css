@@ -1,8 +1,102 @@
 /* Navbar */
 
-.nav-link{
-	margin: 0 50px;;
+nav{
+	display: flex;
+	justify-content: space-between;
+	min-height: 8vh;
+	height: 60px;
+	background-color: #ccb65e;
+    }
 }
+
+.brand{
+	text-transform: uppercase
+}
+
+.navbar-brand{
+	margin: 10px 20%;
+}
+
+.nav-list{
+	display: flex;
+	justify-content: space-around;
+	width: 40%;
+	margin: 10px 0;
+}
+
+.nav-list li{
+	list-style: none;
+}
+
+
+nav:hover {
+  opacity: 1; /*fully visible on :hover*/
+  transition: all .2s;
+  background: #1d3c70;
+}
+
+.burger{
+	display: none;
+	cursor: pointer;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: green;
+	margin: 5px;
+}
+
+@media screen and (max-width:1024px){
+	.nav-list{
+		width: 60%;
+	}
+}
+
+@media screen and (max-width:768px){
+	body{
+		overflow-x: hidden;
+	}
+	.nav-list{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: #39dc14;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width:40%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in; 
+	}
+		
+	.nav-list li{
+		opacity: 0;
+    }
+	
+	.burger{
+		display: block;
+		margin: 13px 12px;
+	}
+}
+
+.nav-active{
+	transform: translateX(0%)
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+	
 /* Landing Page */
 
 
@@ -19,7 +113,9 @@
 	width: 50%;
 	border: solid blue 3px;
 	padding: 15px 15px;
+	margin-top: 8%;
 }
+
 
 /* card info */
 
@@ -33,6 +129,7 @@
 	position: relative;
 	overflow: hidden;
 	transition: all .2s ease;
+	margin-top: 6%;
 }
 
 .card:hover{
@@ -154,6 +251,20 @@ a.hover{
 
 /* Blog Show Page */
 
+.blogshow img{
+	margin-top: 8%;
+    margin-left: 27%;
+}
+
 .blogtitle{
 	text-align: center;
+	font-size: 1.5rem;
+    font-weight: 400;
+	margin-top: 4rem;
 } 
+
+.blogcontent{
+	margin-top: 2rem;
+}
+
+

@@ -1,17 +1,10 @@
 <%- include ("../partials/header") %>
 
-<div class="container-fluid">
-	<div class="row">
-		<% videos.forEach(function(video){ %>
-		<div class="col-md-3 col-sm-6">
-			<p><%= video.title %></p>
-			<img class="card-img-top" src="<%= video.image %>">
-		</div>
-		<a href="/videoIndex/<%= video._id %>">More info</a>
-	    <% }); %>
-	</div>
-</div>
+<h1>Upload File</h1>
 
-<a href="/videoIndex/new">New</a>
+<!-- <form method="POST" action="/videoIndex" enctype="multipart/form-data">
+	<input type="file" name="file">
+	<input type="submit" name="Upload">
+</form> -->
 
 <%- include ("../partials/footer") %>

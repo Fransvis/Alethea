@@ -1,9 +1,11 @@
 <%- include ("../partials/header") %>
 
 <div class="container blogshow">
+	
+	<img src="<%= blog.image %>">
 
 	<p class="blogtitle"><%= blog.title %></p>
-	<p><%= blog.blogContent %></p>
+	<p class="blogcontent" style="white-space: pre-wrap;"><%= blog.blogContent %></p>
 
 	<form action="/blogIndex/<%= blog._id %>?_method=DELETE" method="POST">
 		<button class="btn btn-danger">Delete</button>

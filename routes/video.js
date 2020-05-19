@@ -1,53 +1,20 @@
 var express = require("express"),
     router  = express.Router(),
-	Video   = require("../models/video")
+	Video   = require("../models/video"),
+	Upload  = require("express-fileupload")
 
 router.get("/", function(req, res){
-	Video.find({}, function(err, allVideos){
-		if(err){
-			console.log(err);
-		} else {
-			res.render("videoDirectory/video", {videos: allVideos})
-		}
-	});
+	res.render("videoDirectory/video")
 });
 
-router.get("/new", function(req, res){
-	res.render("videoDirectory/new");
-});
+// router.get("/new", function(req, res){
+// 	res.sendFile(__dirname + "/new");
+// });
 
-router.post("/", function(req, res){
-	var title = req.body.title
-	var image = req.body.image
-	var newVideo = {title: title, image: image}
-	
-	Video.create(newVideo, function(err, newlyCreatedVideo){
-		if(err){
-			console.log("/videoIndex");
-		} else {
-			res.redirect("/videoIndex")
-		}
-	})
-});
+// router.post("/new", function(req, res){
+// 	if(req.files)
+// 	console.log(req.files);
+// });
 
-router.get("/:id", function(req, res){
-	Video.findById(req.params.id, function(err, foundVideo){
-		if(err){
-			console.log(err)
-		} else{
-			res.render("videoDirectory/show", {video: foundVideo})
-		}
-	});
-});
-
-router.get("/:id/edit", function(req, res){
-	Video.findById(req.params.id, function(err, foundVideo){
-		if(err){
-			res.redirect(err);
-		} else {
-			res.render("videoDirectory/edit", {video: foundVideo});
-		}
-	});
-});
 
 module.exports = router;
