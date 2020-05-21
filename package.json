@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Francois Visser",
   "license": "ISC",
@@ -14,8 +14,15 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.7-alpha.3",
     "express-session": "^1.17.0",
+    "gridfs-stream": "^1.1.1",
     "method-override": "^3.0.0",
     "mongodb": "^3.5.5",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.9.7",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

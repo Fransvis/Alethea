@@ -1,13 +1,21 @@
 <%- include ("../partials/header") %>
 
-<div class="container newForm ">
 
-<form method="POST" action="/videoIndex" enctype="multipart/form-data">
-	<input type="file" name="file">
-	<input type="submit" name="Upload">
-</form>
-	
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 m-auto">
+			<h1 style="margin-top: 15%;" class="text-center display-4">Upload Video here</h1>
+			<form action="/videoIndex" method="POST" enctype="multipart/form-data">
+				<div class="custom-file mb-3">
+					<input type="file" name="file" id="file" class="custom-file-input">
+					<label for="file" class="custom-file-label">Choose File</label>
+				</div>
+				<input type="submit" value="Submit" class="btn btn-primary btn-block">
+			</form>
+		</div>
+	</div>
 </div>
+
 
 
 <%- include ("../partials/footer") %>
