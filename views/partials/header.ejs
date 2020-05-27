@@ -21,8 +21,13 @@
         <a class="nav-link" href="/videoIndex">Videos</a>
       </li>
       <li>
-        <a class="nav-link" href="#">Resources</a>
+        <a class="nav-link" href="/resourceIndex">Resources</a>
+      </li>   
+		<% if(currentUser){ %>
+		<li>
+        <a class="nav-link" href="/logout">Logout</a>
       </li>
+		<% } %>
     </ul>
 		<div class="burger">
 			<div class="line1"></div>

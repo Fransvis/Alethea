@@ -4,13 +4,13 @@ var express          = require("express"),
 	bodyParser       = require("body-parser"),
 	Blog             = require("./models/blog"),
 	methodOverride   = require("method-override"),
+	passport         = require("passport"),
+	LocalStrategy    = require("passport-local"),
     blogRoutes       = require("./routes/blog"),
-	// videoRoutes      = require("./routes/video"),
- 	path             = require("path"),
-	crypto           = require("crypto"),
-	multer           = require("multer"),
-	GridFsStorage    = require("multer-gridfs-storage"),
-	Grid             = require("gridfs-stream")
+	videoRoutes      = require("./routes/video"),
+	resourceRoutes   = require("./routes/resources"),
+	authRoutes       = require("./routes/auth"),
+	User             = require("./models/user")
 
 	
 
@@ -22,40 +22,35 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 
+// Middleware
+app.use(function(req, res, next){
+	res.locals.currentUser = req.user;
+	next();
+});
+
+// PASSPORT CONFIG/
+app.use(require("express-session")({
+	secret: "The truth will be revealed",
+	resave: false,
+	saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 // Create Mongo connection
 var conn = mongoose.connection
 
-// Init gfs
-let gfs;
 
-conn.once('open', function () {
-	// Init Stream
-  var gfs = Grid(conn.db, mongoose.mongo);
-	gfs.collection("uploads");
-
-  // all set!
-});
-
-// Create Storage engine
-var storage = new GridFsStorage({
-  url: "mongodb://localhost/jared_web",
-  file: (req, file) => {
-    return new Promise((resolve, reject) => {
-      crypto.randomBytes(16, (err, buf) => {
-        if (err) {
-          return reject(err);
-        }
-        const filename = buf.toString('hex') + path.extname(file.originalname);
-        const fileInfo = {
-          filename: filename,
-          bucketName: 'uploads'
-        };
-        resolve(fileInfo);
-      });
-    });
-  }
-});
-const upload = multer({ storage });
+function isLoggedIn(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("/login");
+}
 
 
 // Landing Page
@@ -63,23 +58,15 @@ app.get("/", function(req, res){
 	res.render("landing");
 });
 
-// Vidroutestes
-app.get("/videoIndex", function(req, res){
-	res.render("videoDirectory/video")
-});
-
-app.get("/videoIndex/new", function(req, res){
-	res.render("videoDirectory/new");
-});
-
-app.post("/videoIndex", upload.single("file"), function(req, res){
-	res.redirect("/videoIndex")
-});
 
 
-// routes are set and app is now told to use those routes with universal start code
+
+
+// Set route usage and initial url
 app.use("/blogIndex", blogRoutes);
-// app.use("/videoIndex", videoRoutes);
+app.use("/videoIndex", videoRoutes);
+app.use("/resourceIndex", resourceRoutes);
+app.use(authRoutes);
 
 
 

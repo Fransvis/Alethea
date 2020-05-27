@@ -2,7 +2,7 @@ var mongoose = require("mongoose")
 
 var videoSchema = new mongoose.Schema({
 	title: String,
-	image: String
+	source: String
 });
 
-module.exports = mongoose.model("videos", videoSchema)
+module.exports = mongoose.model("video", videoSchema)

@@ -1,21 +1,22 @@
 /* Navbar */
 
+
 nav{
 	display: flex;
 	justify-content: space-between;
 	min-height: 8vh;
 	height: 60px;
-	background-color: #ccb65e;
+	/* background-color: white; */
+	transition: top 1s;
     }
-}
-
-.brand{
-	text-transform: uppercase
-}
 
 .navbar-brand{
-	margin: 10px 20%;
+	text-transform: uppercase;
+	margin: 10% 10%;
+	color: #ccb65e;
 }
+
+
 
 .nav-list{
 	display: flex;
@@ -30,9 +31,21 @@ nav{
 
 
 nav:hover {
-  opacity: 1; /*fully visible on :hover*/
+  opacity: 70%; /*fully visible on :hover*/
   transition: all .2s;
-  background: #1d3c70;
+  background: black;
+}
+
+
+/* Hover effects for links */
+.nav-link{
+	color: #ccb65e;
+}
+
+.nav-link:hover {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+	color: white;
 }
 
 .burger{
@@ -45,6 +58,7 @@ nav:hover {
 	height: 3px;
 	background-color: green;
 	margin: 5px;
+	transition: all 0.3s ease;
 }
 
 @media screen and (max-width:1024px){
@@ -60,9 +74,9 @@ nav:hover {
 	.nav-list{
 		position: absolute;
 		right: 0px;
-		height: 92vh;
-		top: 8vh;
-		background-color: #39dc14;
+		height: 94vh;
+		top: 6vh;
+		background-color: black;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -94,6 +108,18 @@ nav:hover {
 		opacity: 1;
 		transform: translateX(0px);
 	}
+}
+
+/* Toggle Burger */
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+	opacity: 0;
+}
+.toggle .line3{
+		transform: rotate(45deg) translate(-5px,6px);
 }
 
 	
@@ -311,6 +337,10 @@ input[type="search"] {
 	margin-top: 8%;
 }
 
+.newForm h1{
+	color: Black;
+}
+
 
 /* card info */
 
@@ -394,7 +424,7 @@ input[type="search"] {
 	text-decoration: none;
 }
 
-a.hover{
+.card a.hover{
 	padding: 0 2rem;
 }
 
@@ -459,6 +489,12 @@ a.hover{
 
 .blogcontent{
 	margin-top: 2rem;
+}
+
+/* VideoIndexPage */
+
+iframe{
+	margin-left: 5%;
 }
 
 

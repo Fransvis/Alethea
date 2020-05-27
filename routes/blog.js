@@ -1,6 +1,15 @@
 var express = require("express"),
     router  = express.Router(),
 	Blog    = require("../models/blog")
+
+// Middleware
+
+function isLoggedIn(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("/login");
+}
 	
 // go to blogIndex page
 router.get("/", function(req, res){
@@ -9,18 +18,18 @@ router.get("/", function(req, res){
 		if(err){
 			console.log(err);
 		} else {
-			res.render("blogDirectory/blog", {blogs: allBlogs})
+			res.render("blogDirectory/blog", {blogs: allBlogs, currentUser: req.user})
 		}
 	});
 });
 
 // go to new blog form page
-router.get("/new", function(req, res){
+router.get("/new", isLoggedIn, function(req, res){
 	res.render("blogDirectory/new");
 });
 
 // add new form into database and post it to blogIndex page
-router.post("/", function(req, res){
+router.post("/", isLoggedIn, function(req, res){
 	// get data from form and add it to blog array
 	var title       = req.body.title
 	var subtitle    = req.body.subtitle
