@@ -14,15 +14,23 @@
 		<a class="navbar-brand" href="/">Brand</a>
 	</div>
     <ul class="nav-list">
+		<li>
+			<ul>
+		    <a class="nav-link" href="/blogIndex">Articles</a>
+			<li><a href="#" class="dropdown">Sexual impurity</a></li>
+			<li><a href="#" class="dropdown">Two</a></li>
+			<li><a href="#" class="dropdown">three</a></li>			
+			</ul>
+		</li>
       <li>
-        <a class="nav-link" href="/blogIndex">Articles</a>
-      </li>
-      <li>
-        <a class="nav-link" href="/videoIndex">Videos</a>
+        	<a class="nav-link" href="/videoIndex">Videos</a>
       </li>
       <li>
         <a class="nav-link" href="/resourceIndex">Resources</a>
-      </li>   
+      </li>  
+	  <li>
+        <a class="nav-link" href="/about">About</a>
+      </li>  
 		<% if(currentUser){ %>
 		<li>
         <a class="nav-link" href="/logout">Logout</a>

@@ -24,12 +24,12 @@ router.get("/", function(req, res){
 });
 
 // go to new blog form page
-router.get("/new", isLoggedIn, function(req, res){
+router.get("/new", function(req, res){
 	res.render("blogDirectory/new");
 });
 
 // add new form into database and post it to blogIndex page
-router.post("/", isLoggedIn, function(req, res){
+router.post("/", function(req, res){
 	// get data from form and add it to blog array
 	var title       = req.body.title
 	var subtitle    = req.body.subtitle

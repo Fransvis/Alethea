@@ -20,17 +20,17 @@ router.get("/", function(req, res){
 	});
 });
 
-router.get("/new", isLoggedIn, function(req, res){
+router.get("/new", function(req, res){
 	res.render("videoDirectory/new");
 });
 
-router.post("/", isLoggedIn,function(req, res){
+router.post("/", function(req, res){
 		// get data from form and add it to video array
-	var title = req.body.title
-	var video = req.body.source
-	var newVideo = {title: title, video: video}
+	var title = req.body.title;
+	var video = req.body.source;
+	var newVideo = {title: title, source: video}
 	
-	Video.create(newVideo, function(err, newlyCreatedVideo){
+	Video.create(newVideo, function(err, newlyCreatedvideo){
 		if(err){
 			console.log(err)
 		} else{

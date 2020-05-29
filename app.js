@@ -2,7 +2,6 @@ var express          = require("express"),
 	app              = express(),
     mongoose         = require("mongoose"),
 	bodyParser       = require("body-parser"),
-	Blog             = require("./models/blog"),
 	methodOverride   = require("method-override"),
 	passport         = require("passport"),
 	LocalStrategy    = require("passport-local"),
@@ -58,6 +57,9 @@ app.get("/", function(req, res){
 	res.render("landing");
 });
 
+app.get("/about", function(req, res){
+	res.render("about");
+});
 
 
 
