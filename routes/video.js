@@ -39,6 +39,16 @@ router.post("/", function(req, res){
 	});
 });
 
+router.delete("/:id", isLoggedIn, function(req, res){
+	Video.findByIdAndRemove(req.params.id, function(err){
+		if(err){
+			res.redirect("/videoIndex")
+		} else {
+			res.redirect("/videoIndex")
+		}
+	});
+});
+
 
 
 

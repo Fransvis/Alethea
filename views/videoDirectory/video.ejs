@@ -1,18 +1,23 @@
 <%- include ("../partials/header") %>
 
-<div class="container videoIndex">
+<div class="container-fluid videoIndex">
 	<div class="row">
 		
 		<% videos.forEach(function(video){ %>
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<iframe width="400" height="300" 
 					src="<%= video.source %>" allowfullscreen>
 				</iframe>
+				<% if(currentUser){ %>
+				<form action="/videoIndex/<%= video._id %>?_method=DELETE" method="POST">
+					<button class="btn btn-danger">Delete</button>
+				</form>
+				<% }; %>
 			</div>
 		<% }); %>
 		
 	</div>
-	<a href="/videoIndex/new">New</a>
+		<a href="/videoIndex/new">New</a>
 </div>
 
 <%- include ("../partials/footer") %>

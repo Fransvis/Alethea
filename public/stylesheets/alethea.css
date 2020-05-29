@@ -140,13 +140,20 @@ ul li:hover ul li{
 		transform: rotate(45deg) translate(-5px,6px);
 }
 
+
+
+
+
+
+
+
 	
 /* Landing Page */
 
 .landing{
   font-family: 'Lato', sans-serif;
   margin: 0;
-  background: url('https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1499652848871-1527a310b13a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -341,6 +348,14 @@ input[type="search"] {
 }
 
 
+
+
+
+
+
+
+
+
 /* New Blog Form */
 
 .form-group{
@@ -358,6 +373,15 @@ input[type="search"] {
 .newForm h1{
 	color: Black;
 }
+
+
+
+
+
+
+
+
+
 
 
 /* card info */
@@ -491,6 +515,13 @@ input[type="search"] {
 }
 
 
+
+
+
+
+
+
+
 /* Blog Show Page */
 
 .blogshow img{
@@ -509,16 +540,36 @@ input[type="search"] {
 	margin-top: 2rem;
 }
 
+
+
+
+
+
+
+
 /* VideoIndexPage */
 
 iframe{
-	margin: 10% 9%;
+	margin: 2% 9%;
 	align-items: center;
 }
 
 .videoIndex{
-	margin: 5% 10%;
-	
+	margin: 7% 0;
 }
+
+.col-md-4{
+	padding-right: 10%;
+	padding-left: 0;
+}
+
+
+
+
+
+
+
+/* About */
+
 
 
