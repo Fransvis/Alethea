@@ -1,25 +1,28 @@
-<%- include ("partials/header") %>
-
-<div class="landing">
-
-
-  <div class="cover">
-    <h1>Discover what's out there.</h1>
-    <form  class="flex-form">
-      <label for="from">
-        <i class="ion-location"></i>
-      </label>
-      <input type="search" placeholder="Where do you want to go?">
-      <input type="submit" value="Search">
-    </form>
-    <div id="madeby">
-      <span>
-        Discover More<a href="https://unsplash.com/@benblenner" target="_blank"></a>
-      </span>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async>				</script>
+    </head>
+  	  <body>
+    
+    
+    <div id="landing-header">
+ 		<h1>Welcome to Alethea!</h1>
+		<a href="/blogIndex" class="btn btn-lg btn-success">Articles</a>
+		<a href="/videoIndex" class="btn btn-lg btn-success">Videos</a>
+		<a href="/resourceIndex" class="btn btn-lg btn-success">Resources</a>
     </div>
-  </div>
-
-</div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
 
 <%- include ("partials/footer") %>
