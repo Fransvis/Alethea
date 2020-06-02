@@ -36,7 +36,8 @@ router.post("/", function(req, res){
 	var image       = req.body.image
 	var abstract    = req.body.abstract
 	var blogContent = req.body.blogContent
-	var newBlog     = {title: title, subtitle: subtitle, image: image, abstract: abstract, blogContent: blogContent}
+	var topic       = req.body.topic
+	var newBlog     = {title: title, subtitle: subtitle, image: image, abstract: abstract, blogContent: blogContent, topic: topic}
 	// create new blog and save to db
 	Blog.create(newBlog, function(err, newlyCreatedBlog){
 		if(err){
@@ -82,6 +83,10 @@ router.put("/:id", function(req, res){
 		}
 	});
 });
+
+
+// Word association
+
 
 // find blog by id and remove from database
 router.delete("/:id", function(req, res){

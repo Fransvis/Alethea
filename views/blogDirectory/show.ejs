@@ -6,11 +6,14 @@
 
 	<p class="blogtitle"><%= blog.title %></p>
 	<p class="blogcontent" style="white-space: pre-wrap;"><%= blog.blogContent %></p>
+	<h6><%= blog.topic %></h6>
 
 	<form action="/blogIndex/<%= blog._id %>?_method=DELETE" method="POST">
 		<button class="btn btn-danger">Delete</button>
 	</form>
 	
+	<a class="btn btn-danger" href="/blogIndex/<%= blog._id %>/edit">Edit</a>
+
 		
 </div>
 

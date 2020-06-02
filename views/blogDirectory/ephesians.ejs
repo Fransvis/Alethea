@@ -1,0 +1,27 @@
+<%- include ("../partials/header") %>
+
+<div class="container-fluid">
+	<div class="row">
+	
+		<% blogs.forEach(function(blog){ %>
+			<div class="card hover">
+				<div class="card-img" style="background-image:url(<%= blog.image %>);">
+					<div class="overlay">
+						<div class="overlay-content">
+							<a class="hover" href="blogIndex/<%= blog._id %>">View More</a>
+						</div>
+					</div>
+				</div>
+					<div class="card-content">
+				<a href="blogIndex/<%= blog._id %>">
+					<h5><%= blog.title %></h5>
+					<p class="card-subtitle"><%= blog.subtitle %></p>
+					<p class="card-abstract"><%= blog.abstract %></p>
+				</a>
+					</div>
+			</div>
+		<% }); %>
+	</div>	
+</div>
+
+<%- include ("../partials/footer") %>

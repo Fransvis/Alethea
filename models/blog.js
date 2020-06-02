@@ -6,6 +6,7 @@ subtitle: String,
 abstract: String,
 image: String,
 blogContent: String,
+topic: String,
 author: {
       id: {
          type: mongoose.Schema.Types.ObjectId,

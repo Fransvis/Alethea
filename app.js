@@ -9,7 +9,8 @@ var express          = require("express"),
 	videoRoutes      = require("./routes/video"),
 	resourceRoutes   = require("./routes/resources"),
 	authRoutes       = require("./routes/auth"),
-	User             = require("./models/user")
+	User             = require("./models/user"),
+	Blog             = require("./models/blog")
 
 	
 
@@ -61,6 +62,15 @@ app.get("/about", function(req, res){
 	res.render("about");
 });
 
+app.get("/blogIndex/ephesians", function(req, res){
+	Blog.find({topic: "Ephesians"}, function(err, allBlogs){
+		if(err){
+			console.log(err);
+		} else {
+			res.render("blogDirectory/ephesians", {blogs: allBlogs, currentUser: req.user})
+		}
+	});
+});
 
 
 

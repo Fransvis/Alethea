@@ -7,24 +7,28 @@
 		<form action="/blogIndex/<%= blog._id %>?_method=PUT" method="POST">
 			<div class="form-group mx-sm-3">
 			<label>Title</label>
-			<input class="form-control" type="text" name="blog[name]"  value="<%= blog.name %>">
+			<input class="form-control" type="text" name="blog[title]"  value="<%= blog.title %>">
+			</div>
+			<div class="form-group mx-sm-3">
+				<label>Subtitle</label>
+			<input class="form-control" type="text" name="blog[subtitle]"  value="<%= blog.subtitle %>">
 			</div>
 			<div class="form-group mx-sm-3">
 				<label>Image</label>
 			<input class="form-control" type="text" name="blog[image]" value="<%= blog.image %>">
 			</div>			
 			<div class="form-group mx-sm-3">
-				<label>Intro</label>
-			<input class="form-control" type="text" name="blog[intro]" value="<%= blog.intro %>">
+				<label>Abstract</label>
+			<input class="form-control" type="text" name="blog[abstract]" value="<%= blog.abstract %>">
 			</div>
 			<div class="form-group mx-sm-3">
 				<label>Content</label>
-			<textarea class="form-control" rows="7" name="blog[blogContent]" value="<%= blog.blogContent %>"></textarea>
+			<textarea class="form-control" rows="7" name="blog[blogContent]"><%= blog.blogContent %></textarea>
 			</div>
-			<button class="btn btn-outline-info mx-sm-3" href="#">Submit</button>
+			<button class="btn btn-outline-info mx-sm-3">Submit</button>
 		</form>
 
-       <!-- <a href="/blogIndex">Back</a> -->
+       <a href="/blogIndex/<%= blog._id %>">Back</a>
 	
 </div>
 
