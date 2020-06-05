@@ -67,7 +67,7 @@ app.get("/blogIndex/ephesians", function(req, res){
 		if(err){
 			console.log(err);
 		} else {
-			res.render("blogDirectory/ephesians", {blogs: allBlogs, currentUser: req.user})
+			res.render("blogDirectory/ephesians", {blogs: allBlogs})
 		}
 	});
 });

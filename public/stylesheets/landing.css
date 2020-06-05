@@ -13,6 +13,15 @@ body {
 
 #landing-header h1 {
   color: #ccb65e;
+  text-shadow: 2px 2px #0f0e0e;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 38px;
+}
+
+#landing-header a{
+	font-size: 150%
 }
 
 .slideshow { 
@@ -42,7 +51,7 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://www.picxclicx.com/wp-content/uploads/2016/10/00286_Bible-Study-2_LR__DSC5399.jpg) 
+  background-image: url(https://images.pexels.com/photos/935944/pexels-photo-935944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) 
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://images.unsplash.com/photo-1458593140930-1f9049c952c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
@@ -57,7 +66,7 @@ body {
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(https://media.swncdn.com/cms/BST/46686-biblehighlighted1200.800w.tn.jpg);
+  background-image: url(https://images.pexels.com/photos/272337/pexels-photo-272337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   animation-delay: 40s; 
 }
 
@@ -82,3 +91,22 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+	
+	#landing-header h1 {
+		font-size: 60px;
+	}
+	
+	#landing-header a{
+		font-size: 50px;
+	}
+	
+	#landing-header a .btn{
+		border-radius: 8px;
+	}
+
+}
+
+
+
