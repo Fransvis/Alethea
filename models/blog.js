@@ -7,6 +7,7 @@ abstract: String,
 image: String,
 blogContent: String,
 topic: String,
+date: String,
 author: {
       id: {
          type: mongoose.Schema.Types.ObjectId,

@@ -1,8 +1,10 @@
 <%- include ("../partials/header") %>
 
-<div class="container blogshow">
+<div class="container-fluid blogshow">
 	
-	<img src="<%= blog.image %>">
+	<img src="<%= blog.image %>" class="center">
+	
+	<a id="back" href="/blogIndex">Back</a>
 
 	<p class="blogtitle"><%= blog.title %></p>
 	<p class="blogcontent" style="white-space: pre-wrap;"><%= blog.blogContent %></p>
@@ -13,6 +15,7 @@
 	</form>
 	
 	<a class="btn btn-danger" href="/blogIndex/<%= blog._id %>/edit">Edit</a>
+	<a id="back" href="/blogIndex">Back</a>
 
 		
 </div>

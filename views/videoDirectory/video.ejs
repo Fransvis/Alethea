@@ -4,8 +4,8 @@
 	<div class="row">
 		
 		<% videos.forEach(function(video){ %>
-			<div class="col-md-4">
-				<iframe width="400" height="300" 
+			<div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
+				<iframe width="300" height="200" 
 					src="<%= video.source %>" allowfullscreen>
 				</iframe>
 				<% if(currentUser){ %>

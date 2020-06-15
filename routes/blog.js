@@ -37,7 +37,8 @@ router.post("/", function(req, res){
 	var abstract    = req.body.abstract
 	var blogContent = req.body.blogContent
 	var topic       = req.body.topic
-	var newBlog     = {title: title, subtitle: subtitle, image: image, abstract: abstract, blogContent: blogContent, topic: topic}
+	var date        = req.body.date
+	var newBlog     = {title: title, subtitle: subtitle, image: image, abstract: abstract, blogContent: blogContent, topic: topic, date:date}
 	// create new blog and save to db
 	Blog.create(newBlog, function(err, newlyCreatedBlog){
 		if(err){

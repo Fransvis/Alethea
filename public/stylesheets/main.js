@@ -22,11 +22,12 @@ const  navSlide = () => {
 		
 		});
 		
-	
+	 
 }
 
 navSlide();
-  
+
+	
 }
 
 // Navbar hide scrolloll
@@ -38,11 +39,10 @@ var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
   } else {
-    document.getElementById("header").style.top = "-60px";
+    document.getElementById("header").style.top = "-180px";
   }
   prevScrollpos = currentScrollPos;
-}
-
+} 
 
 
 
