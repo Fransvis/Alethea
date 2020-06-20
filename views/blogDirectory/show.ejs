@@ -1,12 +1,13 @@
 <%- include ("../partials/header") %>
 
-<div class="container-fluid blogshow">
+<div class="container blogshow">
 	
 	<img src="<%= blog.image %>" class="center">
 	
 	<a id="back" href="/blogIndex">Back</a>
 
 	<p class="blogtitle"><%= blog.title %></p>
+	<p class="blogdate"><%= blog.date %></p>
 	<p class="blogcontent" style="white-space: pre-wrap;"><%= blog.blogContent %></p>
 	<h6><%= blog.topic %></h6>
 

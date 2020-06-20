@@ -15,7 +15,7 @@ router.get("/", function(req, res){
 		if(err){
 			console.log(err);
 		} else{
-			res.render("videoDirectory/video", {videos: allVideos, currentUser: req.user})
+			res.render("videoDirectory/video", {videos: allVideos.reverse(), currentUser: req.user})
 		}
 	});
 });

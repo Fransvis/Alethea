@@ -10,7 +10,7 @@ function isLoggedIn(req, res, next){
 	}
 	res.redirect("/login");
 }
-	
+
 // go to blogIndex page
 router.get("/", function(req, res){
 	// Get all blogs from db
@@ -18,7 +18,7 @@ router.get("/", function(req, res){
 		if(err){
 			console.log(err);
 		} else {
-			res.render("blogDirectory/blog", {blogs: allBlogs, currentUser: req.user})
+			res.render("blogDirectory/blog", {blogs: allBlogs.reverse(), currentUser: req.user})
 		}
 	});
 });

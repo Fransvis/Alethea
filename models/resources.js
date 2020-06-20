@@ -5,7 +5,8 @@ var resourceSchema = new mongoose.Schema({
 	subtitle: String,
 	link: String,
 	image: String,
-	author: String
+	author: String,
+	auth: String
 });
 
 module.exports = mongoose.model("resource", resourceSchema);

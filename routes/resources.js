@@ -7,7 +7,7 @@ router.get("/", function(req, res){
 		if(err){
 			console.log(err);
 		} else{
-			res.render("resourceDirectory/resources", {resources: allResources, currentUser: req.user});
+			res.render("resourceDirectory/resources", {resources: allResources.reverse(), currentUser: req.user});
 		}
 	});
 });

@@ -12,7 +12,7 @@ nav{
 	min-height: 8vh;
 	height: 60px;
 	background-color: white;
-	transition: top 2s;
+	transition: top 1s;
     }
 
 /* test */
@@ -185,13 +185,13 @@ nav ul.menu-area ul li a:hover{
 /* Toggle Burger */
 
 .toggle .line1{
-	transform: rotate(-45deg) translate(-17px,6px);
+	transform: rotate(-45deg) translate(-5px,6px);
 }
 .toggle .line2{
 	opacity: 0;
 }
 .toggle .line3{
-		transform: rotate(45deg) translate(-4px,5px);
+		transform: rotate(45deg) translate(-18px,5px);
 }
 
 
@@ -297,6 +297,13 @@ body{
 
 
 /* Iphone 6,7,8 landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+	  
+
+
+}
 
 
 
@@ -474,6 +481,10 @@ body{
 	font-size: 66%;
 }
 
+.blogIndex .newresource{
+	
+}
+
 
 /* Cards for iphone 6/7/8 */
 
@@ -590,6 +601,12 @@ body{
 	margin-left: 48%;
 }
 
+.blogshow .blogdate{
+	text-align: center;
+	font-size: 66%;
+	margin-top: -13px;
+}
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){
 	
 .blogshow img{
@@ -673,6 +690,32 @@ iframe{
 
 	}
 }
+
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+	
+	iframe{
+		position: relative;
+		width: 459px;
+		height: 300px;
+		border-radius: 5%;
+		border: hidden;
+		margin-top: 5%;
+		background-image: url(https://media.giphy.com/media/67qZ19ZRioDxKGcWxJ/giphy.gif);
+		background-repeat: no-repeat;
+    	background-position: 50% 50%;
+}
+	
+		.videoIndex .row{
+		margin-top: -35%
+	}
+	
+	.videoIndex .col-sm-6{
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-top: 49%;
+
+	}
+} */
 
 
 
