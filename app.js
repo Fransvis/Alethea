@@ -1,22 +1,25 @@
 var express          = require("express"),
-	app              = express(),
-    mongoose         = require("mongoose"),
-	bodyParser       = require("body-parser"),
-	methodOverride   = require("method-override"),
-	passport         = require("passport"),
-	LocalStrategy    = require("passport-local"),
-    blogRoutes       = require("./routes/blog"),
-	videoRoutes      = require("./routes/video"),
-	resourceRoutes   = require("./routes/resources"),
-	authRoutes       = require("./routes/auth"),
-	User             = require("./models/user"),
-	Blog             = require("./models/blog")
+		app              = express(),
+  	mongoose         = require("mongoose"),
+		bodyParser       = require("body-parser"),
+		methodOverride   = require("method-override"),
+		passport         = require("passport"),
+		LocalStrategy    = require("passport-local"),
+  	blogRoutes       = require("./routes/blog"),
+		videoRoutes      = require("./routes/video"),
+		resourceRoutes   = require("./routes/resources"),
+		authRoutes       = require("./routes/auth"),
+		User             = require("./models/user"),
+		Blog             = require("./models/blog")
 
 	
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
-mongoose.connect("mongodb://localhost/jared_web", { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/alethea', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -83,6 +86,6 @@ app.use(authRoutes);
 
 
 
-app.listen("3000", function(){
+app.listen("1000", function(){
 	console.log("Server is running");
 });
