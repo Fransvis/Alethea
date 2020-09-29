@@ -163,6 +163,11 @@ nav ul.menu-area ul li a:hover{
 		display: block;
 		margin: 13px 12px;
 	}
+
+
+	nav ul.menu-area{
+		display: none;
+	}
 	
 }
 
@@ -264,6 +269,7 @@ body{
 	}
 	
 }
+
 
 .nav-active{
 	transform: translateX(0%)
