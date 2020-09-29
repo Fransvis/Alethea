@@ -16,7 +16,7 @@ var express          = require("express"),
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
-mongoose.connect('mongodb://localhost:27017/alethea', {
+mongoose.connect('mongodb+srv://Jared:207878Av@@alethea.95gic.mongodb.net/alethea?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
