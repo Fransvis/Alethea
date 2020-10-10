@@ -1,8 +1,12 @@
 <%- include ("../partials/header") %>
 
 <div class="container-fluid videoIndex">
+	<% if(currentUser){ %>
+		<a id='addVideo' href="/videoIndex/new">Add Video</a>
+		<% }; %>
+	
 	<div class="row">
-		
+
 		<% videos.forEach(function(video){ %>
 			<div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
 				<iframe width="300" height="200" 
@@ -10,14 +14,14 @@
 				</iframe>
 				<% if(currentUser){ %>
 				<form action="/videoIndex/<%= video._id %>?_method=DELETE" method="POST">
-					<button class="btn btn-danger">Delete</button>
+					<button id='deleteVideo' class="btn btn-danger">Delete</button>
 				</form>
 				<% }; %>
 			</div>
 		<% }); %>
 		
 	</div>
-		<a href="/videoIndex/new">New</a>
+
 </div>
 
 <%- include ("../partials/footer") %>

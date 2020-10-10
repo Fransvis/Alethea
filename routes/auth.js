@@ -3,7 +3,7 @@ var express     = require("express"),
 	User        = require("../models/user"),
 	passport    = require("passport")
 
-// Show login Form
+// Show login Form  - update register and login routes to admin access !important
 router.get("/register", function(req, res){
 	res.render("authDirectory/register");
 });

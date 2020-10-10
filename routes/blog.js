@@ -1,6 +1,6 @@
 var express = require("express"),
     router  = express.Router(),
-	Blog    = require("../models/blog")
+		Blog    = require("../models/blog")
 
 // Middleware
 
@@ -37,7 +37,7 @@ router.post("/", function(req, res){
 	var abstract    = req.body.abstract
 	var blogContent = req.body.blogContent
 	var topic       = req.body.topic
-	var date        = req.body.date
+	var date        = getDate();
 	var newBlog     = {title: title, subtitle: subtitle, image: image, abstract: abstract, blogContent: blogContent, topic: topic, date:date}
 	// create new blog and save to db
 	Blog.create(newBlog, function(err, newlyCreatedBlog){

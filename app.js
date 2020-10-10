@@ -5,10 +5,14 @@ var express          = require("express"),
 		methodOverride   = require("method-override"),
 		passport         = require("passport"),
 		LocalStrategy    = require("passport-local"),
+
+
   	blogRoutes       = require("./routes/blog"),
 		videoRoutes      = require("./routes/video"),
 		resourceRoutes   = require("./routes/resources"),
 		authRoutes       = require("./routes/auth"),
+
+		
 		User             = require("./models/user"),
 		Blog             = require("./models/blog")
 

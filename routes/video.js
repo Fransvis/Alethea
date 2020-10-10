@@ -1,6 +1,6 @@
 var express        = require("express"),
     router         = express.Router(),
-	Video          = require("../models/video")
+		Video          = require("../models/video")
 
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()){

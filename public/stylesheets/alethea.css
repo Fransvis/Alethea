@@ -407,7 +407,7 @@ body{
 	color: #fff;
 	display: inline-block;
 	border: 1px solid rgba(255,255,255,.4);
-	height: 40px;
+	height: 0;
 	line-height: 40px;
 	border-radius: 20px;
 	cursor: pointer;
@@ -645,6 +645,14 @@ iframe{
 	margin: 7% 0;
 }
 
+#deleteVideo{
+	margin-bottom: 2vw;
+	margin-left: 10vw;
+}
+
+#addVideo{
+	margin-left: 9vw;
+}
 
 /* iphone 6,7,8 videoIndex */
 
@@ -974,7 +982,7 @@ iframe{
 }
 
 .newresource{
-	margin-top: 27%;
+	margin-top: 6%;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { 
