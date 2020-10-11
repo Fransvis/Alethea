@@ -1,5 +1,5 @@
 # Alethea 
-* Alethia focuses on sharing biblical content with fellow Christians
+* Alethea focuses on sharing biblical content with fellow Christians
 * It is, in reality, the answer to the question: What resources would you prescribe as a theologian?
 
 # # Technologies included
