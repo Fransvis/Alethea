@@ -5,7 +5,8 @@
 # # Technologies included
 * Bootstrap 4.4.1
 * Font-awesome
-* nodejs v12.18.0 - be sure to install node.js on whichever system you are running
+* nodejs v12.18.0 - be sure to install node.js on whichever system you are running (https://nodejs.org/en/download/)
+
 
 # Launch
 1. Require all packages and set app to use express for your routes
@@ -23,4 +24,4 @@
 
 5. (In your terminal) Run with command : node app.js
 
-* Alternatively you can simply pull this entire projet and run it in your terminal with the command: node app.js
+* Alternatively you can simply pull this entire project and run it in your terminal with the command: node app.js (remember to have nodejs installed on your system)
