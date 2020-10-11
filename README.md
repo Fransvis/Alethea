@@ -19,7 +19,7 @@
 
 4. Setup PORT address
 
-<img src='/public/stylesheets/imgs/port.png'>
+<img src='/public/stylesheets/imgs/port1.png'>
 
 5. (In your terminal) Run with command : node app.js
 
