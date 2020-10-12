@@ -12,7 +12,9 @@
 1. Run command: 'npm init' and set up your project (you can choose your own starting point, this project's starting point is declared as: app.js)
 
 2. Require all packages and set app to use express for your routes
-<img src='/public/stylesheets/imgs/packages.png'> 
+
+*** bash 
+npm init
 
 3. create a route 
 <img src='/public/stylesheets/imgs/landing.png'>
