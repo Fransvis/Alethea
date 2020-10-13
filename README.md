@@ -23,23 +23,25 @@
 
 
 # Launch
-1. Run command: 'npm init' and set up your project (you can choose your own starting point, this project's starting point is declared as: app.js)
 
-`npm init`
+* Be sure to install nodejs on your system(https://nodejs.org/en/download/)
+
+1. Run command: `npm init` and set up your project (you can choose your own starting point. This project's starting point is declared as: app.js)
 
 2. Require all packages and set app to use express for your routes
 
 ```javascript
 var express          = require("express"),
-		app              = express(),
-  	mongoose         = require("mongoose"),
-		bodyParser       = require("body-parser"),
-		methodOverride   = require("method-override"),
-		passport         = require("passport"),
-		LocalStrategy    = require("passport-local"),
+app              = express(),
+mongoose         = require("mongoose"),
+bodyParser       = require("body-parser"),
+methodOverride   = require("method-override"),
+passport         = require("passport"),
+LocalStrategy    = require("passport-local"),
 ```
 
-3. create a route 
+3. Create a starting route (usually a simple landing page)
+
 ``` javascript
 app.get("/", function(req, res){
 	res.render("landing");
@@ -61,10 +63,8 @@ app.listen(process.env.PORT || 5000, function(){
 });
 ```
 
-6.  Run with command (or with the starting point that you specified in your npm init setup)
-```Javascript
-node app.js
-```
+6.  Run with command `node app.js` or with the starting point that you specified in your npm init setup
+
 
 * Alternatively you can simply pull this entire project and run it in your terminal with the command:
-```Javascript node app.js``` (remember to have nodejs installed on your system - https://nodejs.org/en/download/)
+ `node app.js` (remember to have nodejs installed on your system - https://nodejs.org/en/download/)
